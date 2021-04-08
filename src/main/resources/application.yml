@@ -1,0 +1,31 @@
+server:
+  port: ${SERVER_PORT:9401}
+management:
+  server:
+    port: ${MANAGEMENT_PORT:8401}
+  endpoint:
+    health:
+      show-details: ALWAYS
+  health:
+    binders:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  build:
+    name: '@project.name@'
+    description: '@project.description@'
+    group: '@project.groupId@'
+    artifact: '@project.artifactId@'
+    version: '@project.version@'
+
+kafka-playback-service:
+  source:
+    consumer-group-id: kafka-playback-service
+    bootstrap-servers: localhost:9092
+  target:
+    bootstrap-servers: localhost:9094
+
