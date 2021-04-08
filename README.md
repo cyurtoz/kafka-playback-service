@@ -1,3 +1,3 @@
 # Kafka Playback Service
 
-A project that sends messages within a time period from one Kafka to the another, with a specified speed coefficient.  
+A project that does a kind of "playback" between Kafka brokers; pulls messages from one Kafka and sends them to the another, in a certain time interval at a specified speed.
